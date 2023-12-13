@@ -19,7 +19,7 @@ const options = {
     const selectedDate = selectedDates[0];
 
     if (selectedDate < new Date()) {
-      Notiflix.Notify.failure('Error', 'Please choose a date in the future', 'OK');
+      Notiflix.Notify.failure('Please choose a date in the future');
       dataStart.disabled = true;
     } else {
       dataStart.disabled = false;
@@ -34,7 +34,7 @@ dataStart.addEventListener('click', startClick);
 function startClick() {
   const endDate = new Date(dataText.value);
   if (endDate < new Date()) {
-      Notiflix.Notify.failure('Error', 'Please choose a date in the future', 'OK');
+      Notiflix.Notify.failure('Please choose a date in the future');
       dataStart.disabled = true;
       return;
     }
